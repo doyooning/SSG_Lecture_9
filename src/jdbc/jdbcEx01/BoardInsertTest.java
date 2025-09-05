@@ -36,17 +36,33 @@ public class BoardInsertTest {
 
             int result = pstmt.executeUpdate();
             System.out.println("저장된 행의 수 : " + result);
-
+            int bno = -1;
             if (result == 1) {
-                ResultSet rs = pstmt.getGeneratedKeys();
+                ResultSet rs = pstmt.getGeneratedKeys(); // 키 하나를 받았습니다
                 if (rs.next()) {
-                    int bno = rs.getInt(1);
+                    bno = rs.getInt(1);
                     System.out.println("bno : " + bno);
                 }
                 rs.close();
-                System.out.println("Insert successful!");
-            } else {
-                System.out.println("Insert failed!");
+            }
+            if (bno != -1) {
+                String selectsql = "select bno, btitle, bcontent, bwriter, bdate, bfilename, bfiledata from boards where bno = ?";
+
+                try (PreparedStatement selectpstmt = con.prepareStatement(selectsql)){
+                    selectpstmt.setInt(1, bno);
+                    try(ResultSet rs = selectpstmt.executeQuery()) {
+                        while (rs.next()) {
+                            bno = rs.getInt(1);
+                            System.out.println("bno : " + bno);
+                            System.out.println("btitle : " +  rs.getString(2));
+                            System.out.println("bcontent : " + rs.getString(3));
+                            System.out.println("bwriter : " + rs.getString(4));
+                            System.out.println("bdate : " + rs.getString(5));
+                            System.out.println("bfilename : " + bno);
+
+                        }
+                    }
+                }
             }
 
         } catch (Exception e) {
