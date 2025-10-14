@@ -1,0 +1,24 @@
+/* 반응형 웹 디자인 */
+
+@media (max-width: 1280px) {
+  body {
+    background-color: pink;
+  }
+}
+
+@media (max-width: 600px) {
+  body {
+    background-color: greenyellow;
+  }
+}
+
+h1 {
+  border-bottom: 2px dotted black;
+  padding: 10px;
+}
+
+span {
+  border: 3px solid red;
+  display: inline;
+  padding: 5px;
+}

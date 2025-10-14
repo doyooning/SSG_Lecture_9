@@ -1,0 +1,57 @@
+body {
+  background-color: azure;
+  display: flex;
+  justify-content: center;
+  padding-top: 8rem;
+}
+
+.card {
+  background-color: white;
+  max-width: 360px;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  border-radius: 2rem;
+}
+
+.banner {
+  background-image: url('background.jpg');
+  background-position: center;
+  display: flex;
+  justify-content: center;
+}
+
+.profile {
+  width: 8rem;
+  height: 8rem;
+  background-image: url('profilepic.jpg');
+  background-size: 160px;
+  background-position: right;
+  border-radius: 50%;
+}
+
+.name {
+  text-align: center;
+  padding-top: 60px;
+}
+
+.follow-btn {
+  padding: 0.2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.follow-btn button {
+  font-size: medium;
+  font-weight: bold;
+  background-color: aqua;
+  border: none;
+  padding: 1rem;
+  outline: none;
+  border-radius: 50px;
+}
+
+.desc {
+  padding: 1.5rem;
+}

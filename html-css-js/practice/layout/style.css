@@ -1,0 +1,30 @@
+html,
+body {
+  /* display: flex; */
+  /* justify-content: space-around; */
+  /* align-items: center; */
+  height: 100%;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  /* justify-content: flex-end; */
+  align-items: flex-start;
+}
+
+/* 공간에 요소를 맞추어 배치 */
+
+div {
+  width: 200px;
+  height: 200px;
+  background-color: tomato;
+}
+
+#second {
+  background-color: seagreen;
+}
+
+#third {
+  background-color: cadetblue;
+}
