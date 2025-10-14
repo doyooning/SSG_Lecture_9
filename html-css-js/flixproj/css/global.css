@@ -1,14 +1,21 @@
-@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&family=Roboto:ital,wght@0,100..900;1,100..900&family=Tektur:wght@400..900&display=swap');
 @import './reset.css';
+@import './variable.css';
 
 body {
   font-family: 'Roboto', sans-serif;
   /* font-family: 'JetBrains Mono', monospace; */
-  background-color: #120522;
+  background-color: var(--background-purple);
   color: white;
 }
 
 * {
   /* 모든 요소를 화면 안에 포함하여 렌더링 */
   box-sizing: border-box;
+}
+
+input {
+  box-sizing: border-box;
+  outline: none;
+  appearance: hidden;
 }
