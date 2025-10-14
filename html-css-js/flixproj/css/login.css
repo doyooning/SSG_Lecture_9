@@ -4,6 +4,16 @@ body {
   overflow: hidden;
 }
 
+h1 {
+  font-family: 'Tektur', monospace;
+}
+
+input {
+  box-sizing: border-box;
+  outline: none;
+  appearance: hidden;
+}
+
 .login-title {
   text-align: center;
 }
@@ -36,6 +46,7 @@ body {
   background-color: var(--darkpurple);
   border-radius: 2rem;
   margin-top: 2rem;
+  transition: background-color 0.2s ease-in-out;
 }
 
 .login-form input[type='submit']:active {
