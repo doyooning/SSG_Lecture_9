@@ -5,6 +5,6 @@ window.onload = function () {
     const header = hd3[i];
     header.style.color = 'orange';
     header.style.backgroundColor = 'green';
-    header.innerHTML = 'From JavaScript';
+    header.innerHTML += '<br> From JavaScript';
   }
 };
